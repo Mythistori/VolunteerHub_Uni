@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Volunteer Hub is a student project for discovering SDU events and volunteering opportunities.">
+    <title>Volunteer Hub | SDU Events and Volunteering</title>
+</head>
+<body>
+    <header id="top">
+        <p><strong>Volunteer Hub</strong></p>
+        <p>SDU events and volunteering opportunities</p>
+
+        <nav>
+            <ul>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#volunteering">Volunteering</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="about">
+            <h1>Discover events. Make a difference.</h1>
+            <p>
+                Volunteer Hub helps SDU students, guests discover campus events
+                and join them as participants or volunteers.
+            </p>
+            <a href="#events">Explore events</a>
+       </section>
+       <section id="events">
+        <h2>Explore events</h2>
+        <p>These are sample events for our student project.</p>
+
+        <article id="carity-fair">
+            <h3>Campus Charity Fair</h3>
+
+            <p><strong>Category:</strong> Charity</p>
+            <p><strong>Date:</strong> To be announced</p>
+            <p><strong>Location:</strong> Campus courtyard</p>
+
+            <p>
+                Join a campus fair and support a community invitiative.
+                You can attend as a participant or help as a volunteer.
+            </p>
+
+            <details>
+                <summary>Event details and ways to join</summary>
+
+                <p>
+                    Participants can visit the fair and take part in its activities.
+                    Volunteers can help welcome visitors and prepare the event space.
+                </p>
+
+                <p>
+                    <strong>Volunteer roles:</strong>
+                    Guest Support and Setup Team. 
+                </p>
+            </details>
+        </article>
+
+        <article id="tech-meetup">
+            <h3>Student Tech Meetup</h3>
+
+            <p><strong>Category:</strong> Technology</p>
+            <p><strong>Date:</strong> To be announced</p>
+            <p><strong>Location:</strong> Campus lecture hall</p>
+
+            <p>
+                Discover student projects, discuss programming,
+                and meet other students interested in technology.
+            </p>
+
+            <details>
+                <summary>Event details and ways to join</summary>
+
+                <p>
+                    Participants can attend project presentations.
+                    Volunteers can welcome guests and guide speakers.
+                </p>
+
+                <p>
+                    <strong>Volunteer role:</strong> Registration Desk.
+                </p>
+            </details>
+        </article>
+       </section>
+
+       <section id="volunteering">
+        <h2>Volunteering opportunities</h2>
+        <p>Explore sample volunteer roles and their responsibilities.</p>
+
+        <table>
+            <caption>Volunteer roles by event</caption>
+
+            <thead>
+                <tr>
+                    <th scope="col">Events</th>
+                    <th scope="col">Role</th>
+                    <th scope="col">Responsibilities</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <th scope="row">
+                        <a href="#charity-fair">Campus Charity Fair</a>
+                    </th>
+                    <td>Guest Support</td>
+                    <td>Welcome visitors and help them find activities.</td>
+                </tr>
+
+                <tr>
+                    <th scope="row">
+                        <a href="#tech-meetup">Student Tech Meetup</a>
+                    </th>
+                    <td>Registration Desk</td>
+                    <td>Welcome participants and check the attendance list.</td>
+                </tr>
+            </tbody>
+        </table>
+       </section>
+       
+       <section id="how-it-works">
+        <h2>How it will work</h2>
+
+        <ol>
+            <li>Browse events and read their details.</li>
+            <li>Choose to join as a participant or apply as a volunteer.</li>
+            <li>For volunteering, select a role and submit an applicantion.</li>
+            <li>Check your registration or application status in My Activity.</li>
+        </ol>
+
+        <p>
+            Organizers will be able to publish events, view participant lists,
+            and accept or reject volunteer application.
+        </p>
+       </section>
+
+       <section id="registration">
+        <h2>Registration form preview</h2>
+
+        <p>
+            This is a preview. Registration is not available yet.
+        </p>
+
+        <form>
+            <fieldset disabled>
+                <legend>Join an event</legend>
+
+                <p>
+                    <label for="full-name">Full name:</label>
+                    <br>
+                    <input
+                    type="text"
+                    id="full-name"
+                    name="full_name"
+                    autocomplete="name"
+                    required
+                    >
+                </p>
+
+                <p>
+                    <label for="email">Email address:</label>
+                    <br>
+                    <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    autocomplete="email"
+                    required
+                    >
+                </p>
+
+                <p>
+                    <label for="event">Choose an event:</label>
+                    <br>
+
+                    <select id="event" name="event" required>
+                        <option value="">Select an event</option>
+                        <option value="charity-fair">Campus Charity Fair</option>
+                        <option value="tech-meetup">Student Tech Meetup</option>
+                    </select>
+                </p>
+
+                <fieldset>
+                    <legend>How would you like to join?</legend>
+
+                    <label>
+                        <input
+                        type="radio"
+                        name="participation_type"
+                        value="participant"
+                        required
+                        >
+                        Participant
+                    </label>
+
+                    <label>
+                        <input
+                        type="radio"
+                        name="participation_type"
+                        value="volunteer"
+                        >
+                        Volunteer
+                    </label>
+                </fieldset>
+
+                <p>
+                    <label for="message">Message to the organizer (optional):</label>
+                    <br>
+
+                    <textarea
+                    id="message"
+                    name="message"
+                    rows="4"
+                    cols="25"
+                    ></textarea>
+                </p>
+
+                <button type="submit" disabled>Registration coming later</button>
+            </fieldset>
+        </form>
+       </section>
+    </main>
+    
+    <footer>
+        <p>Volunteer Hub - Web Programming Fundamentals student project.</p>
+        <p>This is a student prototype, not an official SDU service.</p>
+        <p><a href="#top">Back to top</a></p>
+    </footer>
+</body>
+</html>
