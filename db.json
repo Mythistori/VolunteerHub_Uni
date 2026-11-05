@@ -1,0 +1,20 @@
+{
+  "registrations": [
+    {
+      "full_name": "Test Student",
+      "email": "test@example.com",
+      "event": "charity-fair",
+      "participation_type": "volunteer",
+      "message": "I want to help",
+      "id": 1
+    },
+    {
+      "full_name": "Mukhtarov Madi",
+      "email": "250107041@sdu.edu.kz",
+      "event": "charity-fair",
+      "participation_type": "participant",
+      "message": "hello",
+      "id": 2
+    }
+  ]
+}
