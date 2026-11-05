@@ -15,6 +15,14 @@
       "participation_type": "participant",
       "message": "hello",
       "id": 2
+    },
+    {
+      "full_name": "Yerkinbek Askar",
+      "email": "260107045@sdu.edu.kz",
+      "event": "charity-fair",
+      "participation_type": "participant",
+      "message": "I am Askar",
+      "id": 3
     }
   ]
 }
