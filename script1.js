@@ -3,7 +3,6 @@ const API_URL = "http://localhost:3000/registrations";
 const registrationForm = document.querySelector("#registration form");
 const statusMessage = document.getElementById("registrationStatus");
 
-// GET: Read registrations from backend
 async function getRegistrations() {
     try {
         const response = await fetch(API_URL);
@@ -21,7 +20,7 @@ async function getRegistrations() {
     }
 }
 
-// POST: Create a new registration
+
 registrationForm.addEventListener("submit", async function(event) {
 
     event.preventDefault();
@@ -65,5 +64,5 @@ registrationForm.addEventListener("submit", async function(event) {
     }
 });
 
-// Load data when website opens
+
 getRegistrations();
