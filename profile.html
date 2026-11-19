@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My profile | Volunteer Hub</title>
+    <link rel="stylesheet" href="style1.css">
+    <script src="profile.js" defer></script>
+</head>
+<body>
+    <header id="top">
+        <p><strong>Volunteer Hub</strong></p>
+        <p>SDU events and volunteering opportunities</p>
+
+        <nav>
+            <ul>
+                <li><a href="main_page.html">Home</a></li>
+                <li><a href="main_page.html#events">Events</a></li>
+                <li><a href="profile.html" aria-current="page">My profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Until login (Person 2) is connected, the student is found by email -->
+        <section id="find-profile">
+            <h1>My volunteer profile</h1>
+            <p>Enter the email you used when applying to see your applications, hours and points.</p>
+
+            <form id="profile-form" class="inline-form">
+                <label for="profile-email" class="visually-hidden">Email address</label>
+                <input type="email" id="profile-email" name="email" placeholder="you@sdu.edu.kz" autocomplete="email" required>
+                <button type="submit">Show my activity</button>
+            </form>
+            <p id="profile-status" class="events-status" role="status"></p>
+        </section>
+
+        <div id="profile-content" hidden>
+            <section class="profile-header">
+                <div class="avatar" id="profile-avatar" aria-hidden="true"></div>
+                <div>
+                    <h2 id="profile-name"></h2>
+                    <p id="profile-email-text" class="muted"></p>
+                    <button type="button" id="logout-btn" class="link-btn">Not you? Change email</button>
+                </div>
+            </section>
+
+            <section class="stats-grid" aria-label="Summary">
+                <div class="stat">
+                    <span class="stat-value" id="stat-hours">0</span>
+                    <span class="stat-label">Volunteer hours</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-value" id="stat-points">0</span>
+                    <span class="stat-label">Social GPA points</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-value" id="stat-events">0</span>
+                    <span class="stat-label">Completed shifts</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-value" id="stat-pending">0</span>
+                    <span class="stat-label">Pending applications</span>
+                </div>
+            </section>
+
+            <section>
+                <h2>My applications</h2>
+                <p class="muted">All shifts you applied for and their current status.</p>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th scope="col">Event</th>
+                                <th scope="col">Shift</th>
+                                <th scope="col">Date</th>
+                                <th scope="col">Hours</th>
+                                <th scope="col">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="applications-body"></tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section>
+                <h2>Volunteering history</h2>
+                <p class="muted">Completed shifts. These hours and points count towards your Social GPA.</p>
+                <ul id="history-list" class="history-list"></ul>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>Volunteer Hub - Web Programming Fundamentals student project.</p>
+        <p>This is a student prototype, not an official SDU service.</p>
+        <p><a href="#top">Back to top</a></p>
+    </footer>
+</body>
+</html>
