@@ -5,7 +5,7 @@
   "main": "script1.js",
   "scripts": {
     "start": "json-server --watch db.json --port 3000"
-},
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Mythistori/VolunteerHub_Uni.git"
@@ -19,6 +19,9 @@
   },
   "homepage": "https://github.com/Mythistori/VolunteerHub_Uni#readme",
   "dependencies": {
-    "json-server": "^0.17.4"
+    "argon2": "^0.45.2",
+    "express": "^5.3.0",
+    "json-server": "^0.17.4",
+    "jsonwebtoken": "^9.0.3"
   }
 }
