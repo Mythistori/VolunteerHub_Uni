@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event details | Volunteer Hub</title>
+    <link rel="stylesheet" href="style1.css">
+    <script src="event.js" defer></script>
+</head>
+<body>
+    <header id="top">
+        <p><strong>Volunteer Hub</strong></p>
+        <p>SDU events and volunteering opportunities</p>
+
+        <nav>
+            <ul>
+                <li><a href="main_page.html">Home</a></li>
+                <li><a href="main_page.html#events">Events</a></li>
+                <li><a href="main_page.html#volunteering">Volunteering</a></li>
+                <li><a href="profile.html">My profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <p class="back-link"><a href="main_page.html#events">&larr; Back to all events</a></p>
+
+        <p id="event-status" class="events-status">Loading event...</p>
+
+        <!-- Filled in by event.js -->
+        <section id="event-details" class="event-details" hidden>
+            <div id="event-cover" class="event-cover event-cover-large"></div>
+
+            <div class="event-details-body">
+                <span id="event-category" class="category-badge"></span>
+                <h1 id="event-title"></h1>
+
+                <ul class="event-meta event-meta-large">
+                    <li><strong>Date:</strong> <span id="event-date"></span></li>
+                    <li><strong>Location:</strong> <span id="event-location"></span></li>
+                    <li><strong>Places:</strong> <span id="event-places"></span></li>
+                    <li><strong>Reward:</strong> <span id="event-points" class="points"></span></li>
+                </ul>
+
+                <p id="event-description"></p>
+            </div>
+        </section>
+
+        <section id="shifts" hidden>
+            <h2>Volunteer shifts</h2>
+            <p>Choose a shift that fits your schedule. Hours from accepted shifts are added to your volunteer profile.</p>
+
+            <form id="apply-form">
+                <fieldset>
+                    <legend>1. Choose a shift</legend>
+                    <div id="shift-list" class="shift-list"></div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>2. Your details</legend>
+
+                    <p>
+                        <label for="full-name">Full name:</label>
+                        <input type="text" id="full-name" name="full_name" autocomplete="name" required>
+                    </p>
+
+                    <p>
+                        <label for="email">Email address:</label>
+                        <input type="email" id="email" name="email" autocomplete="email" required>
+                    </p>
+
+                    <p>
+                        <label for="message">Message to the organizer (optional):</label>
+                        <textarea id="message" name="message" rows="3"></textarea>
+                    </p>
+                </fieldset>
+
+                <button type="submit">Apply as volunteer</button>
+                <p id="apply-status" class="form-status" role="status"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Volunteer Hub - Web Programming Fundamentals student project.</p>
+        <p>This is a student prototype, not an official SDU service.</p>
+        <p><a href="#top">Back to top</a></p>
+    </footer>
+</body>
+</html>

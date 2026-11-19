@@ -25,7 +25,10 @@ async function getEvents() {
             throw new Error("GET /events failed with status " + response.status);
         }
 
-        allEvents = await response.json();
+        const today = new Date().toISOString().slice(0, 10);
+
+        // Only upcoming events are shown on the main page
+        allEvents = (await response.json()).filter(event => event.date >= today);
         console.log("GET events:", allEvents);
 
         renderCategoryButtons();
@@ -80,7 +83,10 @@ function createEventCard(event) {
     badge.textContent = event.category;
 
     const title = document.createElement("h3");
-    title.textContent = event.title;
+    const titleLink = document.createElement("a");
+    titleLink.href = "events.html?id=" + event.id;
+    titleLink.textContent = event.title;
+    title.appendChild(titleLink);
 
     const meta = document.createElement("ul");
     meta.className = "event-meta";
@@ -102,15 +108,13 @@ function createEventCard(event) {
     points.className = "points";
     points.textContent = "+" + event.points + " Social GPA";
 
+    // Opens the event page: events.html?id=1
     const button = document.createElement("a");
     button.className = "btn";
-    button.href = "#registration";
+    button.href = "events.html?id=" + event.id;
 
     if (event.places_left > 0) {
-        button.textContent = "Join";
-        button.addEventListener("click", function () {
-            eventSelect.value = String(event.id);
-        });
+        button.textContent = "Details";
     } else {
         button.textContent = "Full";
         button.classList.add("btn-disabled");
