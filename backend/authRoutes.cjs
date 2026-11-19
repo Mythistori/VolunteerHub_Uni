@@ -1,7 +1,7 @@
 const jwt = require("jsonwebtoken");
 const express = require("express");
 
-const { prepareRegistration, verifyPassword } = require("./auth");
+const { prepareRegistration, verifyPassword } = require("./auth.cjs");
 
 
 

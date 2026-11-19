@@ -18,8 +18,7 @@ const rootDir = path.resolve(__dirname, "..");
 
 const require = createRequire(import.meta.url);
 process.env.JWT_SECRET = JWT_SECRET;
-const createAuthRouter = require(path.join(rootDir, "authRoutes.js"));
-
+const createAuthRouter = require("./authRoutes.cjs");
 const app = express();
 const PORT = 3000;
 
