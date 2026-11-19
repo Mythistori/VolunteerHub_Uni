@@ -31,60 +31,25 @@
        </section>
        <section id="events">
         <h2>Explore events</h2>
-        <p>These are sample events for our student project.</p>
+        <p>Find an event, check available places and see how many Social GPA points you can earn.</p>
 
-        <article id="carity-fair">
-            <h3>Campus Charity Fair</h3>
+        <div class="events-toolbar">
+            <label for="event-search" class="visually-hidden">Search events</label>
+            <input
+            type="search"
+            id="event-search"
+            placeholder="Search by name or location..."
+            autocomplete="off"
+            >
 
-            <p><strong>Category:</strong> Charity</p>
-            <p><strong>Date:</strong> To be announced</p>
-            <p><strong>Location:</strong> Campus courtyard</p>
+            <div id="category-filters" class="category-filters" role="group" aria-label="Filter by category">
+                <button type="button" class="filter-btn active" data-category="All">All</button>
+            </div>
+        </div>
 
-            <p>
-                Join a campus fair and support a community invitiative.
-                You can attend as a participant or help as a volunteer.
-            </p>
+        <p id="events-status" class="events-status">Loading events...</p>
 
-            <details>
-                <summary>Event details and ways to join</summary>
-
-                <p>
-                    Participants can visit the fair and take part in its activities.
-                    Volunteers can help welcome visitors and prepare the event space.
-                </p>
-
-                <p>
-                    <strong>Volunteer roles:</strong>
-                    Guest Support and Setup Team. 
-                </p>
-            </details>
-        </article>
-
-        <article id="tech-meetup">
-            <h3>Student Tech Meetup</h3>
-
-            <p><strong>Category:</strong> Technology</p>
-            <p><strong>Date:</strong> To be announced</p>
-            <p><strong>Location:</strong> Campus lecture hall</p>
-
-            <p>
-                Discover student projects, discuss programming,
-                and meet other students interested in technology.
-            </p>
-
-            <details>
-                <summary>Event details and ways to join</summary>
-
-                <p>
-                    Participants can attend project presentations.
-                    Volunteers can welcome guests and guide speakers.
-                </p>
-
-                <p>
-                    <strong>Volunteer role:</strong> Registration Desk.
-                </p>
-            </details>
-        </article>
+        <div id="events-list" class="events-grid"></div>
        </section>
 
        <section id="volunteering">
@@ -105,7 +70,7 @@
             <tbody>
                 <tr>
                     <th scope="row">
-                        <a href="#charity-fair">Campus Charity Fair</a>
+                        <a href="#event-1">Campus Charity Fair</a>
                     </th>
                     <td>Guest Support</td>
                     <td>Welcome visitors and help them find activities.</td>
@@ -113,7 +78,7 @@
 
                 <tr>
                     <th scope="row">
-                        <a href="#tech-meetup">Student Tech Meetup</a>
+                        <a href="#event-2">Student Tech Meetup</a>
                     </th>
                     <td>Registration Desk</td>
                     <td>Welcome participants and check the attendance list.</td>
@@ -128,13 +93,13 @@
         <ol>
             <li>Browse events and read their details.</li>
             <li>Choose to join as a participant or apply as a volunteer.</li>
-            <li>For volunteering, select a role and submit an applicantion.</li>
+            <li>For volunteering, select a role and submit an application.</li>
             <li>Check your registration or application status in My Activity.</li>
         </ol>
 
         <p>
             Organizers will be able to publish events, view participant lists,
-            and accept or reject volunteer application.
+            and accept or reject volunteer applications.
         </p>
        </section>
 
@@ -179,8 +144,6 @@
 
                     <select id="event" name="event" required>
                         <option value="">Select an event</option>
-                        <option value="charity-fair">Campus Charity Fair</option>
-                        <option value="tech-meetup">Student Tech Meetup</option>
                     </select>
                 </p>
 

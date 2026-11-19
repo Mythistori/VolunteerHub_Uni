@@ -205,6 +205,159 @@ button:hover {
     background-color: #173b67;
 }
 
+/* EVENTS: search, filters, cards */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+}
+
+.events-toolbar {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 10px;
+}
+
+.category-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.filter-btn {
+    background-color: #e8f1fb;
+    color: #173b67;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.filter-btn:hover {
+    background-color: #d3e4f7;
+}
+
+.filter-btn.active {
+    background-color: #2865a3;
+    color: white;
+}
+
+.events-status {
+    margin-top: 16px;
+    color: #667;
+    font-size: 14px;
+}
+
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.event-card {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border: 1px solid #e1e8f0;
+    border-left: 1px solid #e1e8f0;
+    border-radius: 12px;
+    padding: 0;
+    margin-top: 0;
+    overflow: hidden;
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.event-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(23, 59, 103, 0.12);
+}
+
+.event-cover {
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    background-color: #2865a3;
+}
+
+.event-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.category-charity    { background-color: #d1495b; }
+.category-technology { background-color: #2865a3; }
+.category-ecology    { background-color: #3a9d5d; }
+.category-education  { background-color: #e09f3e; }
+
+.event-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 18px;
+}
+
+.category-badge {
+    align-self: flex-start;
+    background-color: #e8f1fb;
+    color: #173b67;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 3px 10px;
+    border-radius: 12px;
+    margin-bottom: 8px;
+}
+
+.event-meta {
+    list-style: none;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.event-body > p {
+    font-size: 14px;
+    flex: 1;
+}
+
+.event-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.points {
+    color: #3a9d5d;
+    font-weight: bold;
+}
+
+.btn {
+    background-color: #2865a3;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #173b67;
+}
+
+.btn-disabled,
+.btn-disabled:hover {
+    background-color: #b8c2cc;
+    cursor: not-allowed;
+}
+
 /* FOOTER */
 footer {
     background-color: #173b67;
