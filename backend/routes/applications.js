@@ -4,7 +4,6 @@ import { attachUserContext, isEventOwnerOrAdmin } from "../middleware/authInterf
 
 const router = express.Router();
 
-// Get all applications for a specific shift
 router.get("/shifts/:shiftId/applications", attachUserContext, (req, res) => {
   const shift = db.prepare("SELECT * FROM shifts WHERE id = ?").get(req.params.shiftId);
   if (!shift) return res.status(404).json({ detail: "Shift not found" });
@@ -18,7 +17,6 @@ router.get("/shifts/:shiftId/applications", attachUserContext, (req, res) => {
   res.json(apps);
 });
 
-// Approve or reject an application
 router.patch("/applications/:id/review", attachUserContext, (req, res) => {
   const { status } = req.body;
   if (!["approved", "rejected"].includes(status)) {
@@ -35,7 +33,6 @@ router.patch("/applications/:id/review", attachUserContext, (req, res) => {
     return res.status(403).json({ detail: "Forbidden" });
   }
 
-  // Enforce shift capacity before approving
   if (status === "approved" && application.status !== "approved") {
     const { count } = db
       .prepare("SELECT COUNT(*) as count FROM applications WHERE shift_id = ? AND status = 'approved'")
@@ -47,6 +44,8 @@ router.patch("/applications/:id/review", attachUserContext, (req, res) => {
   }
 
   db.prepare("UPDATE applications SET status = ? WHERE id = ?").run(status, req.params.id);
+  const frontendStatus = status === "approved" ? "Accepted" : "Rejected";
+  db.prepare("UPDATE registrations SET status = ? WHERE application_id = ?").run(frontendStatus, req.params.id);
   res.json(db.prepare("SELECT * FROM applications WHERE id = ?").get(req.params.id));
 });
 

@@ -149,14 +149,15 @@
       "id": 2
     },
     {
-<<<<<<< HEAD
+
       "full_name": "Yerkinbek Askar",
       "email": "260107045@sdu.edu.kz",
       "event": "charity-fair",
       "participation_type": "participant",
       "message": "I am Askar",
       "id": 3
-=======
+    }, 
+    {
       "full_name": "Patrick Jane",
       "email": "mentalist@sdu.edu.kz",
       "event_id": 1,
@@ -165,7 +166,7 @@
       "status": "Pending",
       "message": "Когда игра заканчивается, и король, и пешка ложатся в одну коробку",
       "created_at": "2026-11-19T09:27:37.639Z",
-      "id": 3
+      "id": 7
     },
     {
       "full_name": "Patrick Jane",
@@ -199,7 +200,6 @@
       "message": "",
       "created_at": "2026-11-16T08:00:00.000Z",
       "id": 6
->>>>>>> origin/feature/frontend
     }
   ]
 }
